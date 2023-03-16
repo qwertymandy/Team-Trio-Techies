@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+
+body {
+    background: #52E1E2;
+    color: white;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(odd) {
+    color: #e0ffff;
+    background: #52E1E2;
+}
+
+section:nth-child(even) {
+    color: white;
+    background: #161616;
+}
+
+section .container {
+    margin: 100px;
+    padding: 10%;
+    border-radius: 30px;
+}
+
+section h1 {
+    font-size: 3rem;
+    margin: 20px;
+}
+
+section h2 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    section .text-container {
+        flex-direction: column;
+    }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.p-container {
+    margin-top: 5%;
+}
+
+.p-container p {
+    text-align: center;
+}
+.infinite-scrolling {
+    background: url("https://static.vecteezy.com/system/resources/previews/001/928/973/original/rural-nature-road-scene-free-vector.jpg") repeat-x;
+    height: 645px;
+    width: 5760px; /* The image width times 3 */
+    animation: slide 60s linear infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1920px, 0, 0); /* The image width */
+    }
+  }
+  
+  #footer {text-align: center;}
+  
