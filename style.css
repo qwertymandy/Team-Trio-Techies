@@ -1,94 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: "Asap", sans-serif;
 }
 
 body {
-    background: #52E1E2;
-    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0f4d92;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+align-items: center;
+}
+
+nav li {
+margin: 0 10px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+}
+
+main {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.btn-primary {
+background-color: #0f4d92;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+background-color: #002147;
+}
+
+.btn-secondary {
+background-color: #f9a11d;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+background-color: #d48200;
 }
 
 section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+margin-bottom: 50px;
 }
 
-section:nth-child(odd) {
-    color: #e0ffff;
-    background: #52E1E2;
+.event-card {
+background-color: #f2f2f2;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+text-align: center;
+margin-bottom: 20px;
 }
 
-section:nth-child(even) {
-    color: white;
-    background: #161616;
+.event-card img {
+max-width: 100%;
+margin-bottom: 20px;
+border-radius: 5px;
 }
 
-section .container {
-    margin: 100px;
-    padding: 10%;
-    border-radius: 30px;
+.news-card {
+background-color: #f2f2f2;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+display: flex;
+align-items: center;
+margin-bottom: 20px;
 }
 
-section h1 {
-    font-size: 3rem;
-    margin: 20px;
+.news-card img {
+max-width: 150px;
+margin-right: 20px;
+border-radius: 5px;
 }
 
-section h2 {
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
+footer {
+background-color: #0f4d92;
+color: #fff;
+text-align: center;
+padding: 20px;
 }
 
-@media (max-width: 900px) {
-    section h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-    section .text-container {
-        flex-direction: column;
-    }
+/* Media Queries */
+@media screen and (max-width: 768px) {
+header {
+flex-direction: column;
+align-items: flex-start;
 }
 
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
+css
+Copy code
+nav {
+    margin-top: 20px;
 }
-
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
 }
-
-.p-container {
-    margin-top: 5%;
-}
-
-.p-container p {
-    text-align: center;
-}
-.infinite-scrolling {
-    background: url("https://static.vecteezy.com/system/resources/previews/001/928/973/original/rural-nature-road-scene-free-vector.jpg") repeat-x;
-    height: 645px;
-    width: 5760px; /* The image width times 3 */
-    animation: slide 60s linear infinite;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-1920px, 0, 0); /* The image width */
-    }
-  }
-  
-  #footer {text-align: center;}
-  
